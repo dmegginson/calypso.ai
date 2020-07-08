@@ -1,0 +1,9 @@
+<div class="text mr-1 ml-1">
+  {{fileContents}}
+</div>
+
+<div class="row mt-2" *ngIf="fileContents && fileContents.length > 1000">
+  <span class="btn btn-link">
+    <a class="link pointer" (click)="goHome()">Return home</a>
+  </span>
+</div>

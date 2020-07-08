@@ -1,0 +1,22 @@
+<div class="card mt-2">
+  <h5 class="card-header">Download</h5>
+  <div class="card-body">
+
+    <div class="row mt-2" *ngFor="let csvFile of csvFiles">
+      <div class="col">
+        <span class="btn btn-link">
+          <a class="link pointer" (click)="onDownloadClicked(csvFile.id)">{{csvFile.fileName}}</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col">
+        <span class="btn btn-link">
+          <a class="link pointer" (click)="goHome()">Return home</a>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</div>

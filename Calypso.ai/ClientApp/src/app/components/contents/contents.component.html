@@ -1,0 +1,28 @@
+<div class="card mt-2 mb-2">
+  <h5 class="card-header">Uploaded File Contents</h5>
+  <div class="card-body">
+
+    <div class="row mt-2">
+      <span class="btn btn-link">
+        <a class="link pointer" (click)="goHome()">Return home</a>
+      </span>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col">
+        <select (change)="getCSVFileContents($event.target.value)">
+          <option value="0">
+            Select Uploaded Files
+          </option>
+
+          <option *ngFor="let csvFile of csvFiles" value="{{csvFile.id}}">
+            {{csvFile.fileName}}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-contents-display [content]="selectedFileContents">
+</app-contents-display>
